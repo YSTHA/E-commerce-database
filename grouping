@@ -1,0 +1,2 @@
+SELECT price, COUNT (ProductID) AS priceofproducts
+FROM Product GROUP BY price;
