@@ -2,3 +2,23 @@ INSERT INTO Customer(CustomerID, FirstName,LastName, Email, Phone, RegistrationD
 VALUES(1001, 'Annie','John','Anniejohn@gmail.com','987-654-3210','2022-09-01'),
 (1002, 'Josh','Riv','JoshRiv@gmail.com','555-123-4567','2022-10-10'),
 (1003, 'Sam','Dav','Samdav@gmail.com','777-888-9999','2022-11-20');
+go
+INSERT INTO Supplier(SupplierID, SupplierName,ContactName, ContactEmail, ContactPhone)
+VALUES(2001, 'ABC Supplier','John Smith','johnsmith@example.com','123-456-7890'),
+(2002, 'XYZ Supplier','Bob Smith','bobsmith@gmail.com','987-654-7899'),
+(2003,'DEF Supplier','Gere kim','gerekim@gmail.com','233-556-8878'),
+(2004, 'GHI Supplier','Amar Nath','amarnath@gmail.com','343-876-9000'),
+(2005, 'JKS Supplier','john Smith','johnsmith@gmail.com','765-878-8810');
+go
+INSERT INTO Product(ProductID, ProductName, Category, Price, StockQuantity, SupplierID)
+VALUES(3001, 'Laptop', 'Electronics', 1000,20, 2001),
+(3002, 'SmartPhone', 'Electronics', 800,15, 2002),
+(3003, 'T-Shirt', 'Clothing', 20,100, 2003),
+(3004, 'Watch', 'Accessories', 150,10, 2004),
+(3005, 'Headphones', 'Electronics', 80,30, 2005);
+go
+INSERT INTO [Order](OrderID, CustomerID, OrderDate)
+values (4002,1001, '2023-02-02'),
+(4003,1002, '2023-03-10'),
+(4004,1003, '2023-04-20'),
+(4005,1003, '2023-05-05');
