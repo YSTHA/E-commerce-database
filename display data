@@ -1,0 +1,6 @@
+
+SELECT * FROM customer;
+SELECT * FROM product;
+SELECT * FROM supplier;
+SELECT * FROM [order];
+select * from orderitem;
