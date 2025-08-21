@@ -1,0 +1,50 @@
+CREATE DATABASE ECommerceDB;
+USE ECommerceDB;
+GO
+-- Create Customer Table
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY,
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50),
+    Email NVARCHAR(100),
+    Phone NVARCHAR(20),
+    RegistrationDate DATE
+);
+GO
+-- Create Supplier Table
+CREATE TABLE Supplier (
+    SupplierID INT PRIMARY KEY,
+    SupplierName NVARCHAR(100),
+    ContactName NVARCHAR(100),
+    ContactEmail NVARCHAR(100),
+    ContactPhone NVARCHAR(20)
+);
+GO
+-- Create Product Table
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY,
+    ProductName NVARCHAR(100),
+    Category NVARCHAR(50),
+    Price DECIMAL(10, 2),
+    StockQuantity INT,
+    SupplierID INT,
+    FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID)
+);
+GO
+-- Create Order Table
+CREATE TABLE [Order] (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATE   
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+);
+GO
+-- Create OrderItem Table
+CREATE TABLE OrderItem (
+    OrderItemID INT PRIMARY KEY,
+    OrderID INT,
+    ProductID INT,
+    Quantity INT   
+    FOREIGN KEY (OrderID) REFERENCES [Order](OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
