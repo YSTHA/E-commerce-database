@@ -1,0 +1,4 @@
+INSERT INTO Customer(CustomerID, FirstName,LastName, Email, Phone, RegistrationDate)
+VALUES(1001, 'Annie','John','Anniejohn@gmail.com','987-654-3210','2022-09-01'),
+(1002, 'Josh','Riv','JoshRiv@gmail.com','555-123-4567','2022-10-10'),
+(1003, 'Sam','Dav','Samdav@gmail.com','777-888-9999','2022-11-20');
