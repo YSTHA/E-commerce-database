@@ -1,0 +1,5 @@
+
+SELECT * FROM customer where LastName='john';
+Select * from orderitem where quantity > 2;
+Select * from [order] where customerid= '1001';
+
