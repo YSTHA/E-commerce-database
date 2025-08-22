@@ -1,0 +1,7 @@
+
+SELECT category, COUNT (productID) AS ProductsPerCategory 
+FROM Product 
+GROUP BY category 
+HAVING COUNT(productID) >= 2; 
+
+
