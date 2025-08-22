@@ -1,0 +1,4 @@
+SELECT Product.ProductID, Product.ProductName, Product.Price, Product.Category, Supplier.SupplierID, Supplier.SupplierName
+FROM Product
+FULL JOIN Supplier
+ON Product.SupplierID = Supplier.SupplierID;
