@@ -1,0 +1,4 @@
+CREATE VIEW HighCostproducts AS
+SELECT ProductID, CONCAT(productname, ' ') AS Products
+FROM Product
+WHERE price > 500;
